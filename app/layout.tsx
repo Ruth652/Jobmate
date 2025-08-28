@@ -1,14 +1,16 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { Noto_Sans_Ethiopic } from "next/font/google";
-import { LanguageProvider } from "@/context/language-provider";
+import { ChatProvider } from "@/components/context/ChatProvider";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-const notoSansEthiopic = Noto_Sans_Ethiopic({
-  subsets: ["ethiopic"],
-  display: "swap",
-  variable: "--font-ethiopic",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -24,21 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${notoSansEthiopic.variable}`}
-    >
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-ethiopic: ${notoSansEthiopic.variable};
-}
-        `}</style>
-      </head>
+
+    <html lang="en">
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <ChatProvider>
+          {children}
+        </ChatProvider>
+
       </body>
     </html>
   );
