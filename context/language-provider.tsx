@@ -24,6 +24,19 @@ const translations = {
     // Welcome message
     welcomeMessage:
       "Hello! I'm JobMate, your AI career buddy. I'm here to help Ethiopian youth like you with CV feedback, job opportunities, and interview practice. How can I assist you today?",
+    l_welcome: "Welcome Back",
+      l_subtitle: "Sign in to continue your career journey",
+      email: "Email Address",
+      password: "Password",
+      l_signIn: "Sign In",
+      l_signingIn: "Signing In...",
+      l_noAccount: "Don’t have an account?  Sign up",
+    r_join: "Join JobMate",
+      r_create: "Create your account to get started",
+      r_fullName: "Full Name",
+      r_createAccount: "Create Account",
+      r_haveAccount: "Already have an account? Sign in",
+    
   },
   am: {
     // Header
@@ -34,6 +47,22 @@ const translations = {
     // Welcome message
     welcomeMessage:
       "ሰላም! እኔ JobMate ነኝ፣ የእርስዎ AI ሙያ ጓደኛ። እንደ እርስዎ ላሉ የኢትዮጵያ ወጣቶች CV ግብረመልስ፣ የስራ እድሎች እና የቃለ መጠይቅ ልምምድ ለመስጠት እዚህ ነኝ። ዛሬ እንዴት ልረዳዎት እችላለሁ?",
+    
+      l_welcome: "እንኳን በደህና መጡ",
+      l_subtitle: "የሥራ ጉዞዎን ለመቀጠል ግባ",
+      email: "ኢሜይል አድራሻ",
+      password: "የይለፍ ቃል",
+      l_signIn: "ግባ",
+      l_signingIn: "በመግባት ላይ...",
+      l_noAccount: "መለያ የለህም? አዲስ መለያ አስፈጥር",
+    
+    
+      r_join: "JobMate ጋር ተቀላቀል",
+      r_create: "መለያህን አስፍጠር እና ጀምር",
+      r_fullName: "ሙሉ ስም",
+      r_createAccount: "መለያ አስፈጥር",
+      r_haveAccount: "መለያ አለህ? ግባ",
+    
   },
 };
 
