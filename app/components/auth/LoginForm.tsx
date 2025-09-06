@@ -19,6 +19,7 @@ export default function LoginForm() {
   const dispatch = useDispatch();
 
   const redirect = searchParams.get("redirect") || "/";
+    
 
   useEffect(() => {
     const token = searchParams.get("token");
