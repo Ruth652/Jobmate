@@ -3,6 +3,7 @@ import { ArrowLeft, Globe } from "lucide-react";
 import { useLanguage } from "@/providers/language-provider";
 import ChatInput from "./ChatInput";
 import Card from "./jobSearch/Jobcard";
+import { useRouter } from "next/navigation";
 
 interface JobCardProps {
   id?: string;
@@ -38,6 +39,7 @@ export default function JobChatWindow({
   onBack?: () => void;
 }) {
   const { language, setLanguage, t } = useLanguage();
+  const router = useRouter();
 
   return (
     <div className="flex flex-col w-full h-screen bg-white">
@@ -46,7 +48,7 @@ export default function JobChatWindow({
         <div className="flex items-center gap-3">
           <ArrowLeft
             className="h-5 w-5 text-white cursor-pointer"
-            onClick={onBack}
+            onClick={() => router.push("/dashboard")}
           />
           <div className="h-10 w-10 bg-[#0F3A31] text-white rounded-full flex items-center justify-center font-bold">
             JM
