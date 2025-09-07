@@ -22,8 +22,6 @@ interface FreeformChat {
   updated_at: string;
 }
 
-
-
 const texts = {
   en: {
     jobMate: "JobMate",
@@ -59,9 +57,7 @@ const FreeformChatPage: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   const t = texts[language];
-  const { data: userChatsData,} =
-    useGetFreeformUserChatsQuery();
- 
+  const { data: userChatsData } = useGetFreeformUserChatsQuery();
 
   useEffect(() => {
     const startSession = async () => {
@@ -116,7 +112,7 @@ const FreeformChatPage: React.FC = () => {
     };
 
     startSession();
-  }, [userChatsData, sessionType]); 
+  }, [userChatsData, sessionType, sessionId, language, memoizedCreateSession]);
 
   // useEffect(() => {
   //   const startSession = async () => {
