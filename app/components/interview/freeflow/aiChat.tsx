@@ -112,7 +112,7 @@ const FreeformChatPage: React.FC = () => {
     };
 
     startSession();
-  }, [userChatsData, sessionType, sessionId, language, memoizedCreateSession]);
+  }, [userChatsData, sessionType, createSession, sessionId, language]);
 
   // useEffect(() => {
   //   const startSession = async () => {

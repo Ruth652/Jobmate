@@ -14,7 +14,7 @@ export default function Dashboard() {
   const router = useRouter();
 
   const handleLogout = () => {
-    logout(); // clears tokens, resets state, redirects
+    logout();
   };
 
   const handleRedirect = (path: string) => {
@@ -23,13 +23,13 @@ export default function Dashboard() {
         router.push("/cv");
         break;
       case "jobs":
-        router.push("/jobs");
+        router.push("/chat/jobsearch");
         break;
       case "interview":
         router.push("/interview");
         break;
       case "tips":
-        router.push("/tips");
+        router.push("/offline_tips");
         break;
       default:
         break;

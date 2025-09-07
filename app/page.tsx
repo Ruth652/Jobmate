@@ -88,7 +88,7 @@ const Service = () => {
           icon={<FiUser className="text-black bg-[#98ff7015] rounded-sm" />}
           name={t("interview_title")}
           description={t("interview_desc")}
-          link="/chat/interview"
+          link="/interview"
         />
         <ServiceComp
           icon={
